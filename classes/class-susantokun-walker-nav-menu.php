@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * |==============================================================|
  * | Please DO NOT modify this information :                      |
  * |--------------------------------------------------------------|
@@ -14,12 +14,21 @@
  * | Youtube         : http://youtube.com/susantokun
  * | File Created    : Tuesday, 29th December 2020 7:13:43 am
  * | Last Modified   : Tuesday, 29th December 2020 9:30:22 am
+ * | HISTORY         :
+ * | Monday, 9th May 2022 11:49:31 pm - Susantokun
  * |==============================================================|
  */
 
 if (!class_exists('Susantokun_Walker_Nav_Menu')) {
-    class Susantokun_Walker_Nav_Menu extends Walker_Nav_Menu
+    class Susantokun_Walker_Nav_Menu extends Walker
     {
+        public $tree_type = array( 'post_type', 'taxonomy', 'custom' );
+
+        public $db_fields = array(
+            'parent' => 'menu_item_parent',
+            'id'     => 'db_id',
+        );
+
         public function start_lvl(&$output, $depth = 0, $args = null)
         {
             if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
@@ -52,53 +61,56 @@ if (!class_exists('Susantokun_Walker_Nav_Menu')) {
             $output .= "$indent</ul>{$n}";
         }
 
-        public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+        public function start_el(&$output, $data_object, $depth = 0, $args = null, $current_object_id = 0)
         {
-            if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
+            $menu_item = $data_object;
+
+            if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
                 $t = '';
                 $n = '';
             } else {
                 $t = "\t";
                 $n = "\n";
             }
-            $indent = ($depth) ? str_repeat($t, $depth) : '';
+            $indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
 
-            $classes   = empty($item->classes) ? [] : (array) $item->classes;
-            $classes[] = 'menu-item-' . $item->ID;
+            $classes   = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
+            $classes[] = 'menu-item-' . $menu_item->ID;
 
-            $args = apply_filters('nav_menu_item_args', $args, $item, $depth);
+            $args = apply_filters( 'nav_menu_item_args', $args, $menu_item, $depth );
 
-            $class_names = implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
-            $class_names = $class_names ? ' class="inline-flex items-center justify-center h-6 px-2 ' . esc_attr($class_names) . '"' : '';
+            $class_names = implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $menu_item, $args, $depth ) );
+		    $class_names = $class_names ? ' class="inline-flex items-center justify-center h-6 px-2 ' . esc_attr( $class_names ) . '"' : '';
 
-            $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
-            $id = $id ? ' id="' . esc_attr($id) . '"' : '';
+            $id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $menu_item->ID, $menu_item, $args, $depth );
+            $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
             $output .= $indent . '<li' . $id . $class_names . '>';
 
-            $atts           = [];
-            $atts['title']  = !empty($item->attr_title) ? $item->attr_title : '';
-            $atts['target'] = !empty($item->target) ? $item->target : '';
-            if ('_blank' === $item->target && empty($item->xfn)) {
+            $atts           = array();
+            $atts['title']  = ! empty( $menu_item->attr_title ) ? $menu_item->attr_title : '';
+            $atts['target'] = ! empty( $menu_item->target ) ? $menu_item->target : '';
+            if ( '_blank' === $menu_item->target && empty( $menu_item->xfn ) ) {
                 $atts['rel'] = 'noopener';
             } else {
-                $atts['rel'] = $item->xfn;
+                $atts['rel'] = $menu_item->xfn;
             }
-            $atts['href']         = !empty($item->url) ? $item->url : '';
-            $atts['aria-current'] = $item->current ? 'page' : '';
+            $atts['href']         = ! empty( $menu_item->url ) ? $menu_item->url : '';
+		    $atts['aria-current'] = $menu_item->current ? 'page' : '';
 
-            $atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args, $depth);
+            $atts = apply_filters( 'nav_menu_link_attributes', $atts, $menu_item, $args, $depth );
 
             $attributes = '';
-            foreach ($atts as $attr => $value) {
-                if (is_scalar($value) && '' !== $value && false !== $value) {
-                    $value       = ('href' === $attr) ? esc_url($value) : esc_attr($value);
+            foreach ( $atts as $attr => $value ) {
+                if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
+                    $value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
                     $attributes .= ' ' . $attr . '="' . $value . '"';
                 }
             }
 
-            $title = apply_filters('the_title', $item->title, $item->ID);
-            $title = apply_filters('nav_menu_item_title', $title, $item, $args, $depth);
+
+            $title = apply_filters( 'the_title', $menu_item->title, $menu_item->ID );
+            $title = apply_filters( 'nav_menu_item_title', $title, $menu_item, $args, $depth );
 
             $item_output  = $args->before;
             $item_output .= '<a class="border-b border-transparent link-desktop hover:border-white dark:hover:border-white" ' . $attributes . '>';
@@ -106,7 +118,7 @@ if (!class_exists('Susantokun_Walker_Nav_Menu')) {
             $item_output .= '</a>';
             $item_output .= $args->after;
 
-            $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $menu_item, $depth, $args );
         }
 
         public function end_el(&$output, $item, $depth = 0, $args = null)
