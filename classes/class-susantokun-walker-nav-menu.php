@@ -112,7 +112,7 @@ if (!class_exists('Susantokun_Walker_Nav_Menu')) {
             $title = apply_filters( 'the_title', $menu_item->title, $menu_item->ID );
             $title = apply_filters( 'nav_menu_item_title', $title, $menu_item, $args, $depth );
 
-            $item_output  = $args->before;
+            $item_output  = !empty($args->before);
             $item_output .= '<a class="border-b border-transparent link-desktop hover:border-white dark:hover:border-white" ' . $attributes . '>';
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</a>';
