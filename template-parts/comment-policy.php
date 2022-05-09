@@ -1,0 +1,4 @@
+<div class="p-4 text-gray-800 bg-gray-400 border border-transparent rounded shadow-sm select-none dark:border-gray-700 bg-opacity-70 dark:bg-gray-800 dark:text-gray-200">
+  <div class="mb-1 text-sm font-bold "><?php echo get_theme_mod('comment_policy_title', 'Ketentuan Berkomentar :') ?></div>
+  <?php echo wpautop(get_theme_mod('comment_policy_description', '<div class="text-xs"><div class="flex flex-col mb-1 leading-normal"><p class="truncate"><span class="mr-1 font-bold">1.</span>Dilarang berkomentar yang mengandung SPAM, SARA, HOAX, PORNO.</p><p class="truncate"><span class="mr-1 font-bold">2.</span>Mohon sertakan informasi detail saat terjadi error (pesan error, sreenshoot, code, logs, dsb.).</p></div></div>')) ?>
+</div>

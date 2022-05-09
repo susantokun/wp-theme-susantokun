@@ -1,0 +1,91 @@
+#wpadminbar {
+	z-index: 1;
+}
+
+.dark .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: #1f2937;
+}
+.dark .wp-block-table.is-style-stripes {
+	border-bottom: 1px solid #1f2937;
+}
+
+.custom-logo {
+	margin-right: 0.5rem;
+	height: 18px;
+	width: auto;
+	margin-bottom: 0.5px;
+}
+/* .custom-logo-link {
+	display: flex;
+	align-items: center;
+} */
+
+.menu-item.current-menu-item .link-desktop {
+	border-color: #ffffff;
+}
+.dark .menu-item.current-menu-item .link-desktop {
+	border-color: #ffffff;
+}
+
+.menu-item.current-menu-item .link-mobile {
+	background-color: #2563eb;
+	color: #ffffff;
+}
+.dark .menu-item.current-menu-item .link-mobile {
+	background-color: #111827;
+	color: #ffffff;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	word-break: normal;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	-webkit-clip-path: none;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	right: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+.wp-block-embed__wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.wp-block-embed__wrapper embed,
+.wp-block-embed__wrapper iframe,
+.wp-block-embed__wrapper object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

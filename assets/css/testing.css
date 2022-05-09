@@ -1,0 +1,13 @@
+.dark .textarea-outer-wrapper .textarea-wrapper {
+	background: #1f2937;
+	border-color: #374151;
+}
+.dark .textarea-outer-wrapper .textarea-wrapper .textarea {
+	color: #e5e7eb;
+}
+.dark .post-actions {
+	border-color: #d1d5db;
+}
+.dark .post-action__button {
+	border-top: 1px solid #d1d5db;
+}

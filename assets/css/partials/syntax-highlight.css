@@ -1,0 +1,266 @@
+.syntaxHighlight-comment,
+.syntaxHighlight-quote {
+	color: #a0aec0;
+	font-style: italic;
+}
+
+.syntaxHighlight-doctag,
+.syntaxHighlight-keyword,
+.syntaxHighlight-formula {
+	color: #c678dd;
+}
+
+.syntaxHighlight-section,
+.syntaxHighlight-name,
+.syntaxHighlight-selector-tag,
+.syntaxHighlight-deletion,
+.syntaxHighlight-subst {
+	color: #ff8383;
+}
+
+.syntaxHighlight-literal {
+	color: #56b6c2;
+}
+
+.syntaxHighlight-string,
+.syntaxHighlight-regexp,
+.syntaxHighlight-addition,
+.syntaxHighlight-attribute,
+.syntaxHighlight-meta-string {
+	color: #b5f4a5;
+}
+
+.syntaxHighlight-built_in,
+.syntaxHighlight-class .syntaxHighlight-title {
+	color: #ffe484;
+}
+
+.syntaxHighlight-attr,
+.syntaxHighlight-variable,
+.syntaxHighlight-template-variable,
+.syntaxHighlight-type,
+.syntaxHighlight-selector-class,
+.syntaxHighlight-selector-attr,
+.syntaxHighlight-selector-pseudo,
+.syntaxHighlight-number {
+	color: #ffe484;
+}
+
+.syntaxHighlight-symbol,
+.syntaxHighlight-bullet,
+.syntaxHighlight-link,
+.syntaxHighlight-meta,
+.syntaxHighlight-selector-id,
+.syntaxHighlight-title {
+	color: #61aeee;
+}
+
+.syntaxHighlight-emphasis {
+	font-style: italic;
+}
+
+.syntaxHighlight-strong {
+	font-weight: bold;
+}
+
+.syntaxHighlight-link {
+	text-decoration: underline;
+}
+
+/* gist */
+.gist-data {
+	max-height: 500px;
+	overflow-x: auto;
+}
+.gist .gist-file article {
+	padding: 5px 15px !important;
+}
+.gist .markdown-body {
+	font-size: 14px !important;
+}
+.dark .gist .gist-data {
+	@apply text-gray-300 bg-gray-800 border-b border-gray-700;
+}
+.dark .gist .gist-file {
+	@apply border border-gray-800;
+}
+.dark .gist .gist-meta {
+	@apply bg-gray-800;
+}
+.gist .markdown-body > :first-child {
+	padding: 6px 10px 10px;
+}
+.gist .markdown-body > :last-child {
+	padding: 0 10px;
+}
+.gist .markdown-body h1,
+.gist .markdown-body h2,
+.gist .markdown-body h3 {
+	@apply border-b border-gray-300;
+}
+.dark .gist .markdown-body h1,
+.dark .gist .markdown-body h2,
+.dark .gist .markdown-body h3 {
+	@apply border-b border-gray-700;
+}
+.gist .highlight tbody tr {
+	@apply border-b border-transparent;
+}
+/* one dark theme */
+.dark .gist .highlight {
+	@apply bg-gray-800;
+}
+.dark .gist .blob-num,
+.dark .gist .blob-code-inner,
+.dark .gist .highlight,
+.dark .gist .pl-enm,
+.dark .gist .pl-ko,
+.dark .gist .pl-mo,
+.dark .gist .pl-mp1 .pl-sf,
+.dark .gist .pl-ms,
+.dark .gist .pl-pdc1,
+.dark .gist .pl-scp,
+.dark .gist .pl-smc,
+.dark .gist .pl-som,
+.dark .gist .pl-va,
+.dark .gist .pl-vpf,
+.dark .gist .pl-vpu,
+.dark .gist .pl-mdr {
+	color: #aab1bf;
+}
+.dark .gist .pl-mb,
+.dark .gist .pl-pdb {
+	font-weight: 700;
+}
+.dark .gist .pl-c,
+.dark .gist .pl-c span,
+.dark .gist .pl-pdc {
+	color: #5b6270;
+	font-style: italic;
+}
+.dark .gist .pl-sr .pl-cce {
+	color: #56b5c2;
+	font-weight: 400;
+}
+.dark .gist .pl-ef,
+.dark .gist .pl-en,
+.dark .gist .pl-enf,
+.dark .gist .pl-eoai,
+.dark .gist .pl-kos,
+.dark .gist .pl-mh .pl-pdh,
+.dark .gist .pl-mr {
+	color: #61afef;
+}
+.dark .gist .pl-ens,
+.dark .gist .pl-vi {
+	color: #be5046;
+}
+.dark .gist .pl-enti,
+.dark .gist .pl-mai .pl-sf,
+.dark .gist .pl-ml,
+.dark .gist .pl-sf,
+.dark .gist .pl-sr,
+.dark .gist .pl-sr .pl-sra,
+.dark .gist .pl-src,
+.dark .gist .pl-st,
+.dark .gist .pl-vo {
+	color: #56b5c2;
+}
+.dark .gist .pl-eoi,
+.dark .gist .pl-mri,
+.dark .gist .pl-pds,
+.dark .gist .pl-pse .pl-s1,
+.dark .gist .pl-s,
+.dark .gist .pl-s1 {
+	color: #97c279;
+}
+.dark .gist .pl-k,
+.dark .gist .pl-kolp,
+.dark .gist .pl-mc,
+.dark .gist .pl-pde {
+	color: #c578dd;
+}
+.dark .gist .pl-mi,
+.dark .gist .pl-pdi {
+	color: #c578dd;
+	font-style: italic;
+}
+.dark .gist .pl-mp,
+.dark .gist .pl-stp {
+	color: #818896;
+}
+.dark .gist .pl-mdh,
+.dark .gist .pl-mdi,
+.dark .gist .pl-mdr {
+	font-weight: 400;
+}
+.dark .gist .pl-mdht,
+.dark .gist .pl-mi1 {
+	color: #97c279;
+	background: #020;
+}
+.dark .gist .pl-md,
+.dark .gist .pl-mdhf {
+	color: #df6b75;
+	background: #200;
+}
+.dark .gist .pl-corl {
+	color: #df6b75;
+	text-decoration: underline;
+}
+.dark .gist .pl-ib {
+	background: #df6b75;
+}
+.dark .gist .pl-ii {
+	background: #e0c184;
+	color: #fff;
+}
+.dark .gist .pl-iu {
+	background: #e05151;
+}
+.dark .gist .pl-ms1 {
+	color: #aab1bf;
+	background: #373b41;
+}
+.dark .gist .pl-c1,
+.dark .gist .pl-cn,
+.dark .gist .pl-e,
+.dark .gist .pl-eoa,
+.dark .gist .pl-eoac,
+.dark .gist .pl-eoac .pl-pde,
+.dark .gist .pl-kou,
+.dark .gist .pl-mm,
+.dark .gist .pl-mp .pl-s3,
+.dark .gist .pl-mq,
+.dark .gist .pl-s3,
+.dark .gist .pl-sok,
+.dark .gist .pl-sv,
+.dark .gist .pl-s .pl-s1,
+.dark .gist .pl-smi,
+.dark .gist .pl-s1,
+.dark .gist .pl-mb {
+	color: #d19965;
+}
+.dark .gist .pl-enc,
+.dark .gist .pl-entc,
+.dark .gist .pl-pse .pl-s2,
+.dark .gist .pl-s2,
+.dark .gist .pl-sc,
+.dark .gist .pl-smp,
+.dark .gist .pl-sr .pl-sre,
+.dark .gist .pl-stj,
+.dark .gist .pl-v,
+.dark .gist .pl-pdb {
+	color: #e4bf7a;
+}
+.dark .gist .pl-ent,
+.dark .gist .pl-entl,
+.dark .gist .pl-entm,
+.dark .gist .pl-mh,
+.dark .gist .pl-pdv,
+.dark .gist .pl-smi,
+.dark .gist .pl-sol,
+.dark .gist .pl-mdh,
+.dark .gist .pl-mdi {
+	color: #df6b75;
+}
