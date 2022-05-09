@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * |==============================================================|
  * | Please DO NOT modify this information :                      |
  * |--------------------------------------------------------------|
@@ -14,6 +14,8 @@
  * | Youtube         : http://youtube.com/susantokun
  * | File Created    : Monday, 28th December 2020 8:47:04 am
  * | Last Modified   : Monday, 28th December 2020 8:47:12 am
+ * | HISTORY         :
+ * | Monday, 9th May 2022 10:50:11 pm - Susantokun
  * |==============================================================|
  */
 
@@ -28,7 +30,7 @@
         </div>
         <span class="ml-1 text-sm text-red-500 icon-heart"></span>
       </div>
-      <div class="hidden text-sm sm:block"><?php _e('Theme Version', 'susantokun'); ?> 2.0</div>
+      <div class="hidden text-sm sm:block"><?php _e('Theme Version', 'susantokun'); ?> 2.1</div>
     </div>
   </div>
 </footer>

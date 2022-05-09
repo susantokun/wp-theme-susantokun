@@ -1,9 +1,8 @@
 /*
 Theme Name: Susantokun
 Text Domain: susantokun
-Version: 2.0
-Requires at least: 4.7
-Requires PHP: 5.2.4
+Version: 2.1
+Requires PHP: 8.1
 Description: The first wordpress theme made by susantokun.
 Tags: blog, two-column, custom-background, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, sticky-widgets, disqust-comments
 Author: SUSANTOKUN
@@ -22,6 +21,11 @@ with others.
 
 /*
   Update List :
+  # Versi 2.1 09-05-2022
+  - Update tailwindcss to versi 3
+  - Fix for PHP 8.1
+  - Update dependencies
+
   # Versi 2.0 23-12-2020
   - Update tailwindcss to versi 2
   - Add Dark Mode
