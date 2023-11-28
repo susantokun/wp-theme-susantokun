@@ -30,7 +30,7 @@
         </div>
         <span class="ml-1 text-sm text-red-500 icon-heart"></span>
       </div>
-      <div class="hidden text-sm sm:block"><?php _e('Theme Version', 'susantokun'); ?> 2.1</div>
+      <div class="hidden text-sm sm:block"><?php _e('Theme Version', 'susantokun'); ?> 2.2</div>
     </div>
   </div>
 </footer>

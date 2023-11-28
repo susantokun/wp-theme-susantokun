@@ -28,7 +28,7 @@
       </a>
     <?php } else { ?>
       <a href="<?php the_permalink(); ?>" aria-label="thumbnail">
-        <img src="https://i.imgur.com/d1RjJMu.png" class="object-cover object-center w-full shadow-md" alt="<?php the_title_attribute(); ?>">
+        <img src="/wp-content/themes/wp-theme-susantokun/assets/images/d1RjJMu.png" class="object-cover object-center w-full shadow-md" alt="<?php the_title_attribute(); ?>">
       </a>
     <?php } ?>
     <div class="p-4">

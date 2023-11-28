@@ -55,7 +55,7 @@
             <?php if (z_taxonomy_image_url($cat->term_id)) : ?>
               <img class="p-1" width="80px" height="80px" src="<?php echo z_taxonomy_image_url($cat->term_id); ?>" alt="Tutorial <?php echo $cat->name ?>" title="Tutorial <?php echo $cat->name ?>">
             <?php else : ?>
-              <img class="p-1" width="80px" height="80px" src="https://i.imgur.com/I5oNbDC.png" alt="Tutorial <?php echo $cat->name ?>" title="Tutorial <?php echo $cat->name ?>">
+              <img class="p-1" width="80px" height="80px" src="/wp-content/themes/wp-theme-susantokun/assets/images/I5oNbDC.png" alt="Tutorial <?php echo $cat->name ?>" title="Tutorial <?php echo $cat->name ?>">
             <?php endif; ?>
           </div>
           <div class="mt-4 mb-2 text-sm font-medium leading-tight text-center text-white"><?php echo $cat->name ?> (<?php echo $cat->count ?>)</div>

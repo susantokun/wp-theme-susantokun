@@ -1,7 +1,7 @@
 <?php if (is_page() || is_page_template('templates/template-full-width.php')) : ?>
   <div class="flex flex-col items-center mb-4 text-gray-800 select-none dark:text-gray-200">
     <!-- <div class="flex-shrink-0 w-24 h-24 rounded-full bg-primary"></div> -->
-    <img width="96px" height="96px" class="flex-shrink-0 object-cover object-center rounded-full" src="https://i.imgur.com/IcgVXx1.png" alt="susantokun avatar">
+    <img width="96px" height="96px" class="flex-shrink-0 object-cover object-center rounded-full" src="/wp-content/themes/wp-theme-susantokun/assets/images/IcgVXx1.png" alt="susantokun avatar">
     <div class="flex flex-col items-center mt-4">
       <div class="text-lg font-semibold leading-none uppercase"><?php echo get_the_author_meta('user_nicename') ?></div>
       <div class="mt-1.5 text-sm text-center leading-normal">
@@ -32,7 +32,7 @@
 <?php else : ?>
   <div class="flex flex-col items-center p-4 text-gray-800 select-none sm:px-6 md:flex-row md:items-start dark:text-gray-200">
     <!-- <div class="flex-shrink-0 w-24 h-24 rounded-full bg-primary md:rounded"></div> -->
-    <img width="96px" height="96px" class="flex-shrink-0 object-cover object-center rounded-full lg:rounded" src="https://i.imgur.com/IcgVXx1.png" alt="susantokun avatar">
+    <img width="96px" height="96px" class="flex-shrink-0 object-cover object-center rounded-full lg:rounded" src="/wp-content/themes/wp-theme-susantokun/assets/images/IcgVXx1.png" alt="susantokun avatar">
     <div class="flex flex-col items-center mt-4 md:items-start md:ml-3 ml:0 md:mt-0">
       <div class="text-lg font-semibold leading-none uppercase"><?php echo get_the_author_meta('user_nicename') ?></div>
       <div class="md:mt-1 mt-1.5 text-sm leading-normal text-center md:text-left">

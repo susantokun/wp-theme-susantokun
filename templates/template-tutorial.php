@@ -66,7 +66,7 @@ get_header(); ?>
                         <?php if (z_taxonomy_image_url($cat->term_id)) : ?>
                           <img class="w-20 h-20 p-1" src="<?php echo z_taxonomy_image_url($cat->term_id); ?>" alt="Tutorial <?php echo $cat->name ?>">
                         <?php else : ?>
-                          <img class="w-20 h-20 p-1" src="https://i.imgur.com/I5oNbDC.png" alt="Tutorial <?php echo $cat->name ?>" title="Tutorial <?php echo $cat->name ?>">
+                          <img class="w-20 h-20 p-1" src="/wp-content/themes/wp-theme-susantokun/assets/images/I5oNbDC.png" alt="Tutorial <?php echo $cat->name ?>" title="Tutorial <?php echo $cat->name ?>">
                         <?php endif; ?>
                       </div>
                       <div class="mt-4 mb-2 text-sm font-medium leading-tight text-center text-white"><?php echo $cat->name ?> (<?php echo $cat->count ?>)</div>

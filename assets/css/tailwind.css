@@ -1,7 +1,7 @@
 /*
 Theme Name: Susantokun
 Text Domain: susantokun
-Version: 2.1
+Version: 2.2
 Tested up to: 5.9
 Requires at least: 4.7
 Requires PHP: 5.2.4
@@ -23,6 +23,12 @@ with others.
 
 /*
   Update List :
+  # Versi 2.2 28-11-2023
+  - Update image not found from assets
+  - Update tailwindcss, postcss, cssnano
+  - Fix color
+  - Fix cssnano scripts
+
   # Versi 2.1 09-05-2022
   - Update tailwindcss to versi 3
   - Fix for PHP 8.1
